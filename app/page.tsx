@@ -36,6 +36,89 @@ export default function Home() {
             </div>
 
             <div className="mt-20 max-w-3xl mx-auto">
+              <div className="bg-muted/50 rounded-2xl p-8 md:p-12">
+                <h3 className="text-2xl md:text-3xl font-bold mb-6">
+                  Qu'est-ce qu'un SaaS et pourquoi c'est parfait pour vous ?
+                </h3>
+                <div className="space-y-6 text-left">
+                  <p className="text-lg text-muted-foreground">
+                    Un SaaS (Software as a Service) est comme votre abonnement Netflix ou Spotify,
+                    mais pour votre expertise. C'est une façon moderne de partager votre
+                    savoir-faire avec votre communauté.
+                  </p>
+
+                  <div className="grid md:grid-cols-2 gap-6 mt-8">
+                    <div className="bg-background p-6 rounded-xl">
+                      <h4 className="text-xl font-bold mb-4">Avantages pour vous</h4>
+                      <ul className="space-y-3">
+                        <li className="flex items-start gap-2">
+                          <span className="text-primary">•</span>
+                          <span>Revenus récurrents chaque mois</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-primary">•</span>
+                          <span>Pas de livraison physique</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-primary">•</span>
+                          <span>Automatisation totale</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-primary">•</span>
+                          <span>Scalable à l'infini</span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div className="bg-background p-6 rounded-xl">
+                      <h4 className="text-xl font-bold mb-4">Avantages pour votre audience</h4>
+                      <ul className="space-y-3">
+                        <li className="flex items-start gap-2">
+                          <span className="text-primary">•</span>
+                          <span>Accès instantané à votre expertise</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-primary">•</span>
+                          <span>Mise à jour régulière du contenu</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-primary">•</span>
+                          <span>Support communautaire</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-primary">•</span>
+                          <span>Investissement rentabilisé</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="mt-8 p-6 bg-primary/10 rounded-xl">
+                    <h4 className="text-xl font-bold mb-4">Exemple concret</h4>
+                    <p className="text-muted-foreground">
+                      Si vous êtes un influenceur fitness, votre SaaS pourrait être une application
+                      qui :
+                    </p>
+                    <ul className="mt-4 space-y-2">
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary">→</span>
+                        <span>Génère des programmes d'entraînement personnalisés</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary">→</span>
+                        <span>Suivi les progrès de vos abonnés</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary">→</span>
+                        <span>Offre des recettes et conseils nutritionnels</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-20 max-w-3xl mx-auto">
               <div className="bg-primary/5 rounded-2xl p-8 md:p-12">
                 <h3 className="text-2xl md:text-3xl font-bold mb-6">
                   Vous avez déjà fait le plus dur : construire une audience fidèle
