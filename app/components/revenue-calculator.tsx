@@ -20,20 +20,23 @@ export function RevenueCalculator({
   const [conversionRate, setConversionRate] = useState(initialConversionRate);
   const [subscriptionPrice, setSubscriptionPrice] = useState(initialSubscriptionPrice);
 
-  const convertedSubscribers = Math.floor(subscriberCount * (conversionRate / 100));
-  const monthlyRevenue = convertedSubscribers * subscriptionPrice;
+  const convertedSubscribers = Math.floor((subscriberCount || 0) * ((conversionRate || 0) / 100));
+  const monthlyRevenue = convertedSubscribers * (subscriptionPrice || 0);
   const yearlyRevenue = monthlyRevenue * 12;
 
   const handleSubscriberChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setSubscriberCount(Number(e.target.value));
+    const value = e.target.value === '' ? '' : Number(e.target.value);
+    setSubscriberCount(value as number);
   };
 
   const handleConversionChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setConversionRate(Number(e.target.value));
+    const value = e.target.value === '' ? '' : Number(e.target.value);
+    setConversionRate(value as number);
   };
 
   const handlePriceChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setSubscriptionPrice(Number(e.target.value));
+    const value = e.target.value === '' ? '' : Number(e.target.value);
+    setSubscriptionPrice(value as number);
   };
 
   return (
@@ -49,9 +52,10 @@ export function RevenueCalculator({
               <Input
                 id="subscribers"
                 type="number"
-                value={subscriberCount}
+                value={subscriberCount || ''}
                 onChange={handleSubscriberChange}
                 min="0"
+                placeholder="0"
               />
             </div>
             <div className="space-y-2">
@@ -59,11 +63,12 @@ export function RevenueCalculator({
               <Input
                 id="conversion"
                 type="number"
-                value={conversionRate}
+                value={conversionRate || ''}
                 onChange={handleConversionChange}
                 min="0"
                 max="100"
                 step="0.1"
+                placeholder="0"
               />
             </div>
             <div className="space-y-2">
@@ -71,9 +76,10 @@ export function RevenueCalculator({
               <Input
                 id="price"
                 type="number"
-                value={subscriptionPrice}
+                value={subscriptionPrice || ''}
                 onChange={handlePriceChange}
                 min="0"
+                placeholder="0"
               />
             </div>
           </div>
