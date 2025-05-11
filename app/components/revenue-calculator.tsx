@@ -90,13 +90,13 @@ export function RevenueCalculator({
               <p className="text-2xl font-bold">{convertedSubscribers.toLocaleString()}</p>
             </div>
             <div className="p-4 bg-muted rounded-lg">
-              <p className="text-sm text-muted-foreground">Revenu mensuel</p>
+              <p className="text-sm text-muted-foreground">Revenu mensuel (MRR)</p>
               <p className="text-2xl font-bold">{monthlyRevenue.toLocaleString()}€</p>
             </div>
           </div>
 
           <div className="p-4 bg-primary/10 rounded-lg">
-            <p className="text-sm text-muted-foreground">Revenu annuel</p>
+            <p className="text-sm text-muted-foreground">Revenu annuel (ARR)</p>
             <p className="text-2xl font-bold text-primary">{yearlyRevenue.toLocaleString()}€</p>
           </div>
         </div>
