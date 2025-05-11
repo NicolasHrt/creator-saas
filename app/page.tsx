@@ -1,3 +1,5 @@
+'use client';
+
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Navbar } from '@/components/Navbar';
@@ -13,6 +15,72 @@ import {
   Sparkles,
 } from 'lucide-react';
 import { Input } from '@/components/ui/input';
+import { motion, AnimatePresence } from 'framer-motion';
+
+// Variants pour les animations
+const fadeInUp = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+};
+
+const heroSection = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 0.8,
+      ease: 'easeOut',
+    },
+  },
+};
+
+const heroContent = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: 'easeOut',
+    },
+  },
+};
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.05,
+    },
+  },
+};
+
+const cardHover = {
+  hover: {
+    scale: 1.02,
+    transition: {
+      duration: 0.2,
+    },
+  },
+};
+
+const processCard = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+    },
+  },
+  hover: {
+    y: -5,
+    transition: {
+      duration: 0.2,
+    },
+  },
+};
 
 export default function Home() {
   return (
@@ -21,28 +89,52 @@ export default function Home() {
       <div className="min-h-screen bg-background pt-16">
         <div className="container mx-auto px-4 mt-20">
           <div className="max-w-5xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-foreground">
-              Transformez votre Audience en{' '}
-              <span className="text-primary">5&nbsp;000&nbsp;€/mois</span> de Revenus Récurrents
-            </h1>
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={heroSection}
+              className="space-y-6"
+            >
+              <motion.h1
+                variants={heroContent}
+                className="text-5xl md:text-6xl font-bold mb-6 text-foreground"
+              >
+                Transformez votre Audience en{' '}
+                <span className="text-primary">5&nbsp;000&nbsp;€/mois</span> de Revenus Récurrents
+              </motion.h1>
 
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8">
-              Votre solution SaaS clé en main en 30 jours grâce au développement accéléré par l'IA
-            </p>
+              <motion.p
+                variants={heroContent}
+                className="text-xl md:text-2xl text-muted-foreground mb-8"
+              >
+                Votre solution SaaS clé en main en 30 jours grâce au développement accéléré par l'IA
+              </motion.p>
 
-            <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
-              <Button size="lg">Créer votre solution SaaS</Button>
-            </div>
+              <motion.div
+                variants={heroContent}
+                className="flex flex-col md:flex-row gap-4 justify-center mb-12"
+              >
+                <Button size="lg">Créer votre solution SaaS</Button>
+              </motion.div>
 
-            <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground mb-12">
-              <CheckCircle2 className="w-5 h-5 text-primary shrink-0" />
-              <span>
-                Garantie de remboursement si vous n'atteignez pas 100 utilisateurs dans le premier
-                mois
-              </span>
-            </div>
+              <motion.div
+                variants={heroContent}
+                className="flex items-center justify-center gap-2 text-sm text-muted-foreground mb-12"
+              >
+                <CheckCircle2 className="w-5 h-5 text-primary shrink-0" />
+                <span>
+                  Garantie de remboursement si vous n'atteignez pas 100 utilisateurs dans le premier
+                  mois
+                </span>
+              </motion.div>
+            </motion.div>
 
-            <div className="mt-16">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.4, ease: 'easeOut' }}
+              className="mt-16"
+            >
               <h2 className="text-3xl font-bold mb-8">Découvrez votre potentiel de revenus</h2>
               <RevenueCalculator
                 initialSubscriberCount={10000}
@@ -52,17 +144,35 @@ export default function Home() {
               <p className="text-sm text-muted-foreground mt-4">
                 Ajustez les valeurs pour voir votre potentiel de revenus
               </p>
-            </div>
+            </motion.div>
 
-            <div className="mt-20 max-w-4xl mx-auto">
-              <div className="relative">
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={staggerContainer}
+              className="mt-20 max-w-4xl mx-auto"
+            >
+              <motion.div variants={fadeInUp} className="relative">
                 <div className="absolute inset-0 bg-destructive/5 rounded-3xl transform -rotate-1"></div>
                 <div className="relative bg-destructive/5 rounded-3xl p-8 md:p-12">
-                  <div className="absolute -top-4 -left-4 w-24 h-24 bg-destructive/10 rounded-full blur-2xl"></div>
-                  <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-destructive/10 rounded-full blur-2xl"></div>
-                  <h3 className="text-2xl md:text-3xl font-bold mb-6 relative">
+                  <motion.div
+                    initial={{ scale: 0.8, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    transition={{ delay: 1 }}
+                    className="absolute -top-4 -left-4 w-24 h-24 bg-destructive/10 rounded-full blur-2xl"
+                  ></motion.div>
+                  <motion.div
+                    initial={{ scale: 0.8, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    transition={{ delay: 1.2 }}
+                    className="absolute -bottom-4 -right-4 w-32 h-32 bg-destructive/10 rounded-full blur-2xl"
+                  ></motion.div>
+                  <motion.h3
+                    variants={fadeInUp}
+                    className="text-2xl md:text-3xl font-bold mb-6 relative"
+                  >
                     Le problème des influenceurs : la dépendance aux sponsors
-                  </h3>
+                  </motion.h3>
                   <div className="space-y-6 text-left">
                     <p className="text-lg text-muted-foreground">
                       Vous passez des heures à créer du contenu de qualité, à construire une
@@ -128,17 +238,22 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
 
-            <div className="mt-20 max-w-4xl mx-auto">
-              <div className="relative overflow-hidden">
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={staggerContainer}
+              className="mt-20 max-w-4xl mx-auto"
+            >
+              <motion.div variants={fadeInUp} className="relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-primary/10 to-primary/5"></div>
                 <div className="relative p-8 md:p-12">
                   <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary/0 via-primary to-primary/0"></div>
-                  <h3 className="text-2xl md:text-3xl font-bold mb-6">
+                  <motion.h3 variants={fadeInUp} className="text-2xl md:text-3xl font-bold mb-6">
                     Qu'est-ce qu'un SaaS et pourquoi c'est parfait pour&nbsp;vous&nbsp;?
-                  </h3>
+                  </motion.h3>
                   <div className="space-y-6 text-left">
                     <p className="text-lg text-muted-foreground">
                       Un SaaS (Software as a Service) est comme votre abonnement Netflix ou Spotify,
@@ -215,16 +330,24 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
 
-            <div className="mt-20 max-w-4xl mx-auto">
-              <div className="relative">
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={staggerContainer}
+              className="mt-20 max-w-4xl mx-auto"
+            >
+              <motion.div variants={fadeInUp} className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-primary/10 rounded-3xl transform rotate-1"></div>
                 <div className="relative bg-gradient-to-br from-primary/5 to-primary/10 rounded-3xl p-8 md:p-12">
-                  <h3 className="text-2xl md:text-3xl font-bold mb-6 relative">
+                  <motion.h3
+                    variants={fadeInUp}
+                    className="text-2xl md:text-3xl font-bold mb-6 relative"
+                  >
                     Pourquoi c'est le moment idéal pour lancer votre SaaS
-                  </h3>
+                  </motion.h3>
                   <div className="space-y-6 text-left">
                     <p className="text-lg text-muted-foreground">
                       L'IA a révolutionné le développement logiciel, rendant possible en 30 jours ce
@@ -232,102 +355,155 @@ export default function Home() {
                       ligne de code, il y a toujours un expert qui veille à la qualité.
                     </p>
 
-                    <div className="grid md:grid-cols-3 gap-6 mt-8">
-                      <div className="bg-background/80 p-6 rounded-xl border border-primary/20">
-                        <div className="text-primary font-bold text-2xl mb-2">1</div>
+                    <motion.div
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true, margin: '-100px' }}
+                      variants={staggerContainer}
+                      className="grid md:grid-cols-3 gap-6 mt-8"
+                    >
+                      <motion.div
+                        variants={processCard}
+                        whileHover="hover"
+                        className="bg-background/80 p-6 rounded-xl border border-primary/20"
+                      >
+                        <motion.div
+                          initial={{ scale: 0 }}
+                          animate={{ scale: 1 }}
+                          transition={{ delay: 0.2, type: 'spring' }}
+                          className="text-primary font-bold text-2xl mb-2"
+                        >
+                          1
+                        </motion.div>
                         <h4 className="text-xl font-bold mb-4">Analyse & Design</h4>
                         <ul className="space-y-2 text-sm">
-                          <li className="flex items-start gap-2">
+                          <motion.li variants={fadeInUp} className="flex items-start gap-2">
                             <Users className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                             <span>Étude de votre audience</span>
-                          </li>
-                          <li className="flex items-start gap-2">
+                          </motion.li>
+                          <motion.li variants={fadeInUp} className="flex items-start gap-2">
                             <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                             <span>Design de l'interface</span>
-                          </li>
-                          <li className="flex items-start gap-2">
+                          </motion.li>
+                          <motion.li variants={fadeInUp} className="flex items-start gap-2">
                             <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                             <span>Architecture technique</span>
-                          </li>
+                          </motion.li>
                         </ul>
-                      </div>
+                      </motion.div>
 
-                      <div className="bg-background/80 p-6 rounded-xl border border-primary/20">
-                        <div className="text-primary font-bold text-2xl mb-2">2</div>
+                      <motion.div
+                        variants={processCard}
+                        whileHover="hover"
+                        className="bg-background/80 p-6 rounded-xl border border-primary/20"
+                      >
+                        <motion.div
+                          initial={{ scale: 0 }}
+                          animate={{ scale: 1 }}
+                          transition={{ delay: 0.3, type: 'spring' }}
+                          className="text-primary font-bold text-2xl mb-2"
+                        >
+                          2
+                        </motion.div>
                         <h4 className="text-xl font-bold mb-4">Développement IA</h4>
                         <ul className="space-y-2 text-sm">
-                          <li className="flex items-start gap-2">
+                          <motion.li variants={fadeInUp} className="flex items-start gap-2">
                             <Sparkles className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                             <span>Génération de code optimisé</span>
-                          </li>
-                          <li className="flex items-start gap-2">
+                          </motion.li>
+                          <motion.li variants={fadeInUp} className="flex items-start gap-2">
                             <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                             <span>Tests automatisés</span>
-                          </li>
-                          <li className="flex items-start gap-2">
+                          </motion.li>
+                          <motion.li variants={fadeInUp} className="flex items-start gap-2">
                             <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                             <span>Intégration continue</span>
-                          </li>
+                          </motion.li>
                         </ul>
-                      </div>
+                      </motion.div>
 
-                      <div className="bg-background/80 p-6 rounded-xl border border-primary/20">
-                        <div className="text-primary font-bold text-2xl mb-2">3</div>
+                      <motion.div
+                        variants={processCard}
+                        whileHover="hover"
+                        className="bg-background/80 p-6 rounded-xl border border-primary/20"
+                      >
+                        <motion.div
+                          initial={{ scale: 0 }}
+                          animate={{ scale: 1 }}
+                          transition={{ delay: 0.4, type: 'spring' }}
+                          className="text-primary font-bold text-2xl mb-2"
+                        >
+                          3
+                        </motion.div>
                         <h4 className="text-xl font-bold mb-4">Expertise Humaine</h4>
                         <ul className="space-y-2 text-sm">
-                          <li className="flex items-start gap-2">
+                          <motion.li variants={fadeInUp} className="flex items-start gap-2">
                             <Users className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                             <span>Review par des experts</span>
-                          </li>
-                          <li className="flex items-start gap-2">
+                          </motion.li>
+                          <motion.li variants={fadeInUp} className="flex items-start gap-2">
                             <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                             <span>Optimisations manuelles</span>
-                          </li>
-                          <li className="flex items-start gap-2">
+                          </motion.li>
+                          <motion.li variants={fadeInUp} className="flex items-start gap-2">
                             <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                             <span>Tests de performance</span>
-                          </li>
+                          </motion.li>
                         </ul>
-                      </div>
-                    </div>
+                      </motion.div>
+                    </motion.div>
 
-                    <div className="mt-8 grid md:grid-cols-2 gap-6">
-                      <div className="p-6 bg-background/80 rounded-xl border border-primary/20">
+                    <motion.div
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true, margin: '-100px' }}
+                      variants={staggerContainer}
+                      className="mt-8 grid md:grid-cols-2 gap-6"
+                    >
+                      <motion.div
+                        variants={processCard}
+                        whileHover="hover"
+                        className="p-6 bg-background/80 rounded-xl border border-primary/20"
+                      >
                         <h4 className="text-xl font-bold mb-4">Avantages uniques</h4>
                         <ul className="space-y-3">
-                          <li className="flex items-start gap-2">
+                          <motion.li variants={fadeInUp} className="flex items-start gap-2">
                             <DollarSign className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                             <span>Coûts divisés par 5</span>
-                          </li>
-                          <li className="flex items-start gap-2">
+                          </motion.li>
+                          <motion.li variants={fadeInUp} className="flex items-start gap-2">
                             <Calendar className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                             <span>Délai réduit de 80%</span>
-                          </li>
-                          <li className="flex items-start gap-2">
+                          </motion.li>
+                          <motion.li variants={fadeInUp} className="flex items-start gap-2">
                             <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                             <span>Qualité professionnelle garantie</span>
-                          </li>
+                          </motion.li>
                         </ul>
-                      </div>
+                      </motion.div>
 
-                      <div className="p-6 bg-background/80 rounded-xl border border-primary/20">
+                      <motion.div
+                        variants={processCard}
+                        whileHover="hover"
+                        className="p-6 bg-background/80 rounded-xl border border-primary/20"
+                      >
                         <h4 className="text-xl font-bold mb-4">Pourquoi maintenant ?</h4>
                         <ul className="space-y-3">
-                          <li className="flex items-start gap-2">
+                          <motion.li variants={fadeInUp} className="flex items-start gap-2">
                             <CheckCircle2 className="w-5 h-5 text-primary mt-0.5" />
                             <span>Technologie mature et fiable</span>
-                          </li>
-                          <li className="flex items-start gap-2">
+                          </motion.li>
+                          <motion.li variants={fadeInUp} className="flex items-start gap-2">
                             <TrendingUp className="w-5 h-5 text-primary mt-0.5" />
                             <span>Coûts historiquement bas</span>
-                          </li>
-                          <li className="flex items-start gap-2">
+                          </motion.li>
+                          <motion.li variants={fadeInUp} className="flex items-start gap-2">
                             <CheckCircle2 className="w-5 h-5 text-primary mt-0.5" />
                             <span>Avantage concurrentiel</span>
-                          </li>
+                          </motion.li>
                         </ul>
-                      </div>
-                    </div>
+                      </motion.div>
+                    </motion.div>
 
                     <div className="mt-8 p-6 bg-background/80 rounded-xl border border-primary/20">
                       <h4 className="text-xl font-bold mb-4">La promesse</h4>
@@ -340,17 +516,22 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
 
-            <div className="mt-20 max-w-4xl mx-auto">
-              <div className="relative overflow-hidden">
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={staggerContainer}
+              className="mt-20 max-w-4xl mx-auto"
+            >
+              <motion.div variants={fadeInUp} className="relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-primary/10 to-primary/5"></div>
                 <div className="relative p-8 md:p-12">
                   <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary/0 via-primary to-primary/0"></div>
-                  <h3 className="text-2xl md:text-3xl font-bold mb-6">
+                  <motion.h3 variants={fadeInUp} className="text-2xl md:text-3xl font-bold mb-6">
                     Vous avez déjà fait le plus dur : construire une audience&nbsp;fidèle
-                  </h3>
+                  </motion.h3>
                   <div className="space-y-6 text-left">
                     <p className="text-lg text-muted-foreground">
                       La partie la plus difficile est derrière vous. Vous avez réussi à :
@@ -382,19 +563,31 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
 
             {/* Section Témoignages */}
-            <div className="mt-20 max-w-4xl mx-auto">
-              <div className="relative">
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={staggerContainer}
+              className="mt-20 max-w-4xl mx-auto"
+            >
+              <motion.div variants={fadeInUp} className="relative">
                 <div className="absolute inset-0 bg-primary/5 rounded-3xl transform -rotate-1"></div>
                 <div className="relative bg-primary/5 rounded-3xl p-8 md:p-12">
-                  <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center">
+                  <motion.h3
+                    variants={fadeInUp}
+                    className="text-2xl md:text-3xl font-bold mb-8 text-center"
+                  >
                     Ce que disent nos clients
-                  </h3>
-                  <div className="grid md:grid-cols-2 gap-8">
-                    <div className="bg-background/80 p-6 rounded-xl border border-primary/20">
+                  </motion.h3>
+                  <motion.div variants={staggerContainer} className="grid md:grid-cols-2 gap-8">
+                    <motion.div
+                      variants={fadeInUp}
+                      whileHover={{ scale: 1.02 }}
+                      className="bg-background/80 p-6 rounded-xl border border-primary/20"
+                    >
                       <div className="flex items-center gap-4 mb-4">
                         <a
                           href="https://twitter.com/victortimsit"
@@ -424,9 +617,13 @@ export default function Home() {
                           <ArrowRight className="ml-2 h-4 w-4" />
                         </a>
                       </Button>
-                    </div>
+                    </motion.div>
 
-                    <div className="bg-background/80 p-6 rounded-xl border border-primary/20">
+                    <motion.div
+                      variants={fadeInUp}
+                      whileHover={{ scale: 1.02 }}
+                      className="bg-background/80 p-6 rounded-xl border border-primary/20"
+                    >
                       <div className="flex items-center gap-4 mb-4">
                         <a
                           href="https://x.com/benjamincode"
@@ -462,15 +659,20 @@ export default function Home() {
                           <ArrowRight className="ml-2 h-4 w-4" />
                         </a>
                       </Button>
-                    </div>
-                  </div>
+                    </motion.div>
+                  </motion.div>
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
 
             {/* Section Tarification */}
-            <div className="mt-20 max-w-4xl mx-auto">
-              <div className="relative">
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={staggerContainer}
+              className="mt-20 max-w-4xl mx-auto"
+            >
+              <motion.div variants={fadeInUp} className="relative">
                 <div className="absolute inset-0 bg-primary/5 rounded-3xl transform rotate-1"></div>
                 <div className="relative bg-primary/5 rounded-3xl p-8 md:p-12">
                   <div className="text-center">
@@ -582,8 +784,8 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
 
             {/* Footer */}
             <footer>
