@@ -191,6 +191,128 @@ export default function Home() {
             </div>
 
             <div className="mt-20 max-w-3xl mx-auto">
+              <div className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-2xl p-8 md:p-12">
+                <h3 className="text-2xl md:text-3xl font-bold mb-6">
+                  Pourquoi c'est le moment idéal pour lancer votre SaaS
+                </h3>
+                <div className="space-y-6 text-left">
+                  <p className="text-lg text-muted-foreground">
+                    L'IA a révolutionné le développement logiciel, rendant possible en 30 jours ce
+                    qui prenait autrefois 6 mois. Mais ne vous y trompez pas : derrière chaque ligne
+                    de code, il y a toujours un expert qui veille à la qualité.
+                  </p>
+
+                  <div className="grid md:grid-cols-3 gap-6 mt-8">
+                    <div className="bg-background/80 p-6 rounded-xl border border-primary/20">
+                      <div className="text-primary font-bold text-2xl mb-2">1</div>
+                      <h4 className="text-xl font-bold mb-4">Analyse & Design</h4>
+                      <ul className="space-y-2 text-sm">
+                        <li className="flex items-start gap-2">
+                          <span className="text-primary">→</span>
+                          <span>Étude de votre audience</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-primary">→</span>
+                          <span>Design de l'interface</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-primary">→</span>
+                          <span>Architecture technique</span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div className="bg-background/80 p-6 rounded-xl border border-primary/20">
+                      <div className="text-primary font-bold text-2xl mb-2">2</div>
+                      <h4 className="text-xl font-bold mb-4">Développement IA</h4>
+                      <ul className="space-y-2 text-sm">
+                        <li className="flex items-start gap-2">
+                          <span className="text-primary">→</span>
+                          <span>Génération de code optimisé</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-primary">→</span>
+                          <span>Tests automatisés</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-primary">→</span>
+                          <span>Intégration continue</span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div className="bg-background/80 p-6 rounded-xl border border-primary/20">
+                      <div className="text-primary font-bold text-2xl mb-2">3</div>
+                      <h4 className="text-xl font-bold mb-4">Expertise Humaine</h4>
+                      <ul className="space-y-2 text-sm">
+                        <li className="flex items-start gap-2">
+                          <span className="text-primary">→</span>
+                          <span>Review par des experts</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-primary">→</span>
+                          <span>Optimisations manuelles</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-primary">→</span>
+                          <span>Tests de performance</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="mt-8 grid md:grid-cols-2 gap-6">
+                    <div className="p-6 bg-background/80 rounded-xl border border-primary/20">
+                      <h4 className="text-xl font-bold mb-4">Avantages uniques</h4>
+                      <ul className="space-y-3">
+                        <li className="flex items-start gap-2">
+                          <span className="text-primary">•</span>
+                          <span>Coûts divisés par 5</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-primary">•</span>
+                          <span>Délai réduit de 80%</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-primary">•</span>
+                          <span>Qualité professionnelle garantie</span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div className="p-6 bg-background/80 rounded-xl border border-primary/20">
+                      <h4 className="text-xl font-bold mb-4">Pourquoi maintenant ?</h4>
+                      <ul className="space-y-3">
+                        <li className="flex items-start gap-2">
+                          <span className="text-primary">•</span>
+                          <span>Technologie mature et fiable</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-primary">•</span>
+                          <span>Coûts historiquement bas</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-primary">•</span>
+                          <span>Avantage concurrentiel</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="mt-8 p-6 bg-background/80 rounded-xl border border-primary/20">
+                    <h4 className="text-xl font-bold mb-4">La promesse</h4>
+                    <p className="text-muted-foreground">
+                      Nous combinons la puissance de l'IA avec l'expertise humaine pour créer votre
+                      SaaS en 30 jours. Vous obtenez une application professionnelle, performante et
+                      évolutive, à un coût accessible. C'est le moment idéal pour transformer votre
+                      audience en business durable.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-20 max-w-3xl mx-auto">
               <div className="bg-primary/5 rounded-2xl p-8 md:p-12">
                 <h3 className="text-2xl md:text-3xl font-bold mb-6">
                   Vous avez déjà fait le plus dur : construire une audience fidèle
