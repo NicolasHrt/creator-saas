@@ -12,13 +12,14 @@ import {
   ArrowRight,
   Sparkles,
 } from 'lucide-react';
+import { Input } from '@/components/ui/input';
 
 export default function Home() {
   return (
     <>
       <Navbar />
       <div className="min-h-screen bg-background pt-16">
-        <div className="container mx-auto px-4 py-20">
+        <div className="container mx-auto px-4 mt-20">
           <div className="max-w-5xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 text-foreground">
               Transformez votre Audience en <span className="text-primary">5 000 €/mois</span> de
@@ -31,6 +32,14 @@ export default function Home() {
 
             <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
               <Button size="lg">Créer votre solution SaaS</Button>
+            </div>
+
+            <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground mb-12">
+              <CheckCircle2 className="w-5 h-5 text-primary shrink-0" />
+              <span>
+                Garantie de remboursement si vous n'atteignez pas 100 utilisateurs dans le premier
+                mois
+              </span>
             </div>
 
             <div className="mt-16">
@@ -68,19 +77,19 @@ export default function Home() {
                         </h4>
                         <ul className="space-y-3">
                           <li className="flex items-start gap-2">
-                            <AlertCircle className="w-5 h-5 text-destructive mt-0.5" />
+                            <AlertCircle className="w-5 h-5 text-destructive shrink-0 mt-0.5" />
                             <span>Revenus imprévisibles et instables</span>
                           </li>
                           <li className="flex items-start gap-2">
-                            <AlertCircle className="w-5 h-5 text-destructive mt-0.5" />
+                            <AlertCircle className="w-5 h-5 text-destructive shrink-0 mt-0.5" />
                             <span>Dépendance aux budgets marketing des marques</span>
                           </li>
                           <li className="flex items-start gap-2">
-                            <AlertCircle className="w-5 h-5 text-destructive mt-0.5" />
+                            <AlertCircle className="w-5 h-5 text-destructive shrink-0 mt-0.5" />
                             <span>Négociations constantes pour chaque collaboration</span>
                           </li>
                           <li className="flex items-start gap-2">
-                            <AlertCircle className="w-5 h-5 text-destructive mt-0.5" />
+                            <AlertCircle className="w-5 h-5 text-destructive shrink-0 mt-0.5" />
                             <span>Pas de revenus pendant les périodes creuses</span>
                           </li>
                         </ul>
@@ -90,19 +99,19 @@ export default function Home() {
                         <h4 className="text-xl font-bold mb-4 text-primary">La solution</h4>
                         <ul className="space-y-3">
                           <li className="flex items-start gap-2">
-                            <CheckCircle2 className="w-5 h-5 text-primary mt-0.5" />
+                            <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                             <span>Votre propre produit à vendre</span>
                           </li>
                           <li className="flex items-start gap-2">
-                            <TrendingUp className="w-5 h-5 text-primary mt-0.5" />
+                            <TrendingUp className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                             <span>Revenus récurrents et prévisibles</span>
                           </li>
                           <li className="flex items-start gap-2">
-                            <CheckCircle2 className="w-5 h-5 text-primary mt-0.5" />
+                            <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                             <span>Indépendance financière</span>
                           </li>
                           <li className="flex items-start gap-2">
-                            <CheckCircle2 className="w-5 h-5 text-primary mt-0.5" />
+                            <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                             <span>Contrôle total sur votre business</span>
                           </li>
                         </ul>
@@ -142,19 +151,19 @@ export default function Home() {
                         <h4 className="text-xl font-bold mb-4">Avantages pour vous</h4>
                         <ul className="space-y-3">
                           <li className="flex items-start gap-2">
-                            <TrendingUp className="w-5 h-5 text-primary mt-0.5" />
+                            <TrendingUp className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                             <span>Revenus récurrents chaque mois</span>
                           </li>
                           <li className="flex items-start gap-2">
-                            <CheckCircle2 className="w-5 h-5 text-primary mt-0.5" />
+                            <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                             <span>Pas de livraison physique</span>
                           </li>
                           <li className="flex items-start gap-2">
-                            <CheckCircle2 className="w-5 h-5 text-primary mt-0.5" />
+                            <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                             <span>Automatisation totale</span>
                           </li>
                           <li className="flex items-start gap-2">
-                            <Users className="w-5 h-5 text-primary mt-0.5" />
+                            <Users className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                             <span>Scalable à l'infini</span>
                           </li>
                         </ul>
@@ -231,15 +240,15 @@ export default function Home() {
                         <h4 className="text-xl font-bold mb-4">Analyse & Design</h4>
                         <ul className="space-y-2 text-sm">
                           <li className="flex items-start gap-2">
-                            <Users className="w-4 h-4 text-primary mt-0.5" />
+                            <Users className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                             <span>Étude de votre audience</span>
                           </li>
                           <li className="flex items-start gap-2">
-                            <CheckCircle2 className="w-4 h-4 text-primary mt-0.5" />
+                            <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                             <span>Design de l'interface</span>
                           </li>
                           <li className="flex items-start gap-2">
-                            <CheckCircle2 className="w-4 h-4 text-primary mt-0.5" />
+                            <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                             <span>Architecture technique</span>
                           </li>
                         </ul>
@@ -250,15 +259,15 @@ export default function Home() {
                         <h4 className="text-xl font-bold mb-4">Développement IA</h4>
                         <ul className="space-y-2 text-sm">
                           <li className="flex items-start gap-2">
-                            <Sparkles className="w-4 h-4 text-primary mt-0.5" />
+                            <Sparkles className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                             <span>Génération de code optimisé</span>
                           </li>
                           <li className="flex items-start gap-2">
-                            <CheckCircle2 className="w-4 h-4 text-primary mt-0.5" />
+                            <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                             <span>Tests automatisés</span>
                           </li>
                           <li className="flex items-start gap-2">
-                            <CheckCircle2 className="w-4 h-4 text-primary mt-0.5" />
+                            <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                             <span>Intégration continue</span>
                           </li>
                         </ul>
@@ -269,15 +278,15 @@ export default function Home() {
                         <h4 className="text-xl font-bold mb-4">Expertise Humaine</h4>
                         <ul className="space-y-2 text-sm">
                           <li className="flex items-start gap-2">
-                            <Users className="w-4 h-4 text-primary mt-0.5" />
+                            <Users className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                             <span>Review par des experts</span>
                           </li>
                           <li className="flex items-start gap-2">
-                            <CheckCircle2 className="w-4 h-4 text-primary mt-0.5" />
+                            <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                             <span>Optimisations manuelles</span>
                           </li>
                           <li className="flex items-start gap-2">
-                            <CheckCircle2 className="w-4 h-4 text-primary mt-0.5" />
+                            <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                             <span>Tests de performance</span>
                           </li>
                         </ul>
@@ -289,15 +298,15 @@ export default function Home() {
                         <h4 className="text-xl font-bold mb-4">Avantages uniques</h4>
                         <ul className="space-y-3">
                           <li className="flex items-start gap-2">
-                            <DollarSign className="w-5 h-5 text-primary mt-0.5" />
+                            <DollarSign className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                             <span>Coûts divisés par 5</span>
                           </li>
                           <li className="flex items-start gap-2">
-                            <Calendar className="w-5 h-5 text-primary mt-0.5" />
+                            <Calendar className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                             <span>Délai réduit de 80%</span>
                           </li>
                           <li className="flex items-start gap-2">
-                            <CheckCircle2 className="w-5 h-5 text-primary mt-0.5" />
+                            <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                             <span>Qualité professionnelle garantie</span>
                           </li>
                         </ul>
@@ -377,7 +386,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-
+            {/* 
             <div className="mt-20 max-w-4xl mx-auto">
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-primary/10 rounded-3xl transform -rotate-1"></div>
@@ -393,12 +402,94 @@ export default function Home() {
                     </p>
                     <Button size="lg" className="text-lg px-8 py-6">
                       Créer votre solution SaaS
-                      <ArrowRight className="ml-2 w-5 h-5" />
+                      <ArrowRight className="ml-2 w-5 h-5 shrink-0" />
                     </Button>
                   </div>
                 </div>
               </div>
+            </div> */}
+
+            {/* Section Garantie */}
+            <div className="mt-20 max-w-4xl mx-auto">
+              <div className="relative">
+                <div className="absolute inset-0 bg-primary/5 rounded-3xl transform rotate-1"></div>
+                <div className="relative bg-primary/5 rounded-3xl p-8 md:p-12">
+                  <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/10 rounded-full blur-2xl"></div>
+                  <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-primary/10 rounded-full blur-2xl"></div>
+                  <div className="text-center">
+                    <h3 className="text-2xl md:text-3xl font-bold mb-6">
+                      Notre Garantie : 100 Utilisateurs ou Remboursé
+                    </h3>
+                    <p className="text-lg text-muted-foreground mb-8">
+                      Nous sommes tellement confiants dans notre capacité à vous aider à réussir que
+                      nous vous offrons une garantie sans risque
+                    </p>
+                    <div className="grid md:grid-cols-3 gap-6 mt-8">
+                      <div className="bg-background/80 p-6 rounded-xl border border-primary/20">
+                        <div className="text-primary font-bold text-2xl mb-2">100%</div>
+                        <h4 className="text-xl font-bold mb-4">Remboursement</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Si vous n'atteignez pas 100 utilisateurs dans le premier mois, nous vous
+                          remboursons intégralement
+                        </p>
+                      </div>
+                      <div className="bg-background/80 p-6 rounded-xl border border-primary/20">
+                        <div className="text-primary font-bold text-2xl mb-2">30</div>
+                        <h4 className="text-xl font-bold mb-4">Jours</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Un mois complet pour atteindre l'objectif avec notre support personnalisé
+                        </p>
+                      </div>
+                      <div className="bg-background/80 p-6 rounded-xl border border-primary/20">
+                        <div className="text-primary font-bold text-2xl mb-2">0</div>
+                        <h4 className="text-xl font-bold mb-4">Risque</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Aucun engagement à long terme, aucune question posée pour le remboursement
+                        </p>
+                      </div>
+                    </div>
+                    <div className="mt-8">
+                      <Button size="lg" className="text-lg px-8 py-6">
+                        Commencer sans risque
+                        <ArrowRight className="ml-2 w-5 h-5 shrink-0" />
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+
+            {/* Footer */}
+            <footer>
+              <div className="container mx-auto px-4 py-12">
+                <div className="mt-12 pt-8 border-t border-border">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="space-y-4">
+                      <h4 className="font-bold text-lg">Contact</h4>
+                      <ul className="space-y-2 text-sm text-muted-foreground">
+                        <li>contact@creator-saas.com</li>
+                        <li>+33 1 23 45 67 89</li>
+                        <li>Paris, France</li>
+                      </ul>
+                    </div>
+                    <div className="space-y-4">
+                      <h4 className="font-bold text-lg">Newsletter</h4>
+                      <p className="text-muted-foreground text-sm">
+                        Restez informé des dernières actualités et conseils.
+                      </p>
+                      <div className="flex gap-2">
+                        <Input type="email" placeholder="Votre email" className="flex-1" />
+                        <Button size="sm">S'inscrire</Button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-8 pt-8 border-t border-border text-center text-sm text-muted-foreground">
+                  <p>© {new Date().getFullYear()} Creator SaaS. Tous droits réservés.</p>
+                </div>
+              </div>
+            </footer>
           </div>
         </div>
       </div>
