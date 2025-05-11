@@ -36,6 +36,78 @@ export default function Home() {
             </div>
 
             <div className="mt-20 max-w-3xl mx-auto">
+              <div className="bg-destructive/5 rounded-2xl p-8 md:p-12">
+                <h3 className="text-2xl md:text-3xl font-bold mb-6">
+                  Le problème des influenceurs : la dépendance aux sponsors
+                </h3>
+                <div className="space-y-6 text-left">
+                  <p className="text-lg text-muted-foreground">
+                    Vous passez des heures à créer du contenu de qualité, à construire une
+                    communauté fidèle, mais votre revenu dépend toujours des décisions des
+                    marques...
+                  </p>
+
+                  <div className="grid md:grid-cols-2 gap-6 mt-8">
+                    <div className="bg-background/50 p-6 rounded-xl border border-destructive/20">
+                      <h4 className="text-xl font-bold mb-4 text-destructive">
+                        La réalité actuelle
+                      </h4>
+                      <ul className="space-y-3">
+                        <li className="flex items-start gap-2">
+                          <span className="text-destructive">•</span>
+                          <span>Revenus imprévisibles et instables</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-destructive">•</span>
+                          <span>Dépendance aux budgets marketing des marques</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-destructive">•</span>
+                          <span>Négociations constantes pour chaque collaboration</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-destructive">•</span>
+                          <span>Pas de revenus pendant les périodes creuses</span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div className="bg-background/50 p-6 rounded-xl border border-primary/20">
+                      <h4 className="text-xl font-bold mb-4 text-primary">La solution</h4>
+                      <ul className="space-y-3">
+                        <li className="flex items-start gap-2">
+                          <span className="text-primary">•</span>
+                          <span>Votre propre produit à vendre</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-primary">•</span>
+                          <span>Revenus récurrents et prévisibles</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-primary">•</span>
+                          <span>Indépendance financière</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-primary">•</span>
+                          <span>Contrôle total sur votre business</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="mt-8 p-6 bg-background/50 rounded-xl border border-destructive/20">
+                    <h4 className="text-xl font-bold mb-4">Le moment est venu de changer</h4>
+                    <p className="text-muted-foreground">
+                      Vous avez déjà la chose la plus précieuse : une audience qui vous fait
+                      confiance. Ne laissez pas cette confiance se transformer uniquement en revenus
+                      pour les marques. Créez votre propre source de revenus récurrents.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-20 max-w-3xl mx-auto">
               <div className="bg-muted/50 rounded-2xl p-8 md:p-12">
                 <h3 className="text-2xl md:text-3xl font-bold mb-6">
                   Qu'est-ce qu'un SaaS et pourquoi c'est parfait pour vous ?
