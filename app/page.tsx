@@ -2,6 +2,16 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Navbar } from '@/components/Navbar';
 import { RevenueCalculator } from './components/revenue-calculator';
+import {
+  TrendingUp,
+  Users,
+  DollarSign,
+  Calendar,
+  CheckCircle2,
+  AlertCircle,
+  ArrowRight,
+  Sparkles,
+} from 'lucide-react';
 
 export default function Home() {
   return (
@@ -58,19 +68,19 @@ export default function Home() {
                         </h4>
                         <ul className="space-y-3">
                           <li className="flex items-start gap-2">
-                            <span className="text-destructive">•</span>
+                            <AlertCircle className="w-5 h-5 text-destructive mt-0.5" />
                             <span>Revenus imprévisibles et instables</span>
                           </li>
                           <li className="flex items-start gap-2">
-                            <span className="text-destructive">•</span>
+                            <AlertCircle className="w-5 h-5 text-destructive mt-0.5" />
                             <span>Dépendance aux budgets marketing des marques</span>
                           </li>
                           <li className="flex items-start gap-2">
-                            <span className="text-destructive">•</span>
+                            <AlertCircle className="w-5 h-5 text-destructive mt-0.5" />
                             <span>Négociations constantes pour chaque collaboration</span>
                           </li>
                           <li className="flex items-start gap-2">
-                            <span className="text-destructive">•</span>
+                            <AlertCircle className="w-5 h-5 text-destructive mt-0.5" />
                             <span>Pas de revenus pendant les périodes creuses</span>
                           </li>
                         </ul>
@@ -80,19 +90,19 @@ export default function Home() {
                         <h4 className="text-xl font-bold mb-4 text-primary">La solution</h4>
                         <ul className="space-y-3">
                           <li className="flex items-start gap-2">
-                            <span className="text-primary">•</span>
+                            <CheckCircle2 className="w-5 h-5 text-primary mt-0.5" />
                             <span>Votre propre produit à vendre</span>
                           </li>
                           <li className="flex items-start gap-2">
-                            <span className="text-primary">•</span>
+                            <TrendingUp className="w-5 h-5 text-primary mt-0.5" />
                             <span>Revenus récurrents et prévisibles</span>
                           </li>
                           <li className="flex items-start gap-2">
-                            <span className="text-primary">•</span>
+                            <CheckCircle2 className="w-5 h-5 text-primary mt-0.5" />
                             <span>Indépendance financière</span>
                           </li>
                           <li className="flex items-start gap-2">
-                            <span className="text-primary">•</span>
+                            <CheckCircle2 className="w-5 h-5 text-primary mt-0.5" />
                             <span>Contrôle total sur votre business</span>
                           </li>
                         </ul>
@@ -132,19 +142,19 @@ export default function Home() {
                         <h4 className="text-xl font-bold mb-4">Avantages pour vous</h4>
                         <ul className="space-y-3">
                           <li className="flex items-start gap-2">
-                            <span className="text-primary">•</span>
+                            <TrendingUp className="w-5 h-5 text-primary mt-0.5" />
                             <span>Revenus récurrents chaque mois</span>
                           </li>
                           <li className="flex items-start gap-2">
-                            <span className="text-primary">•</span>
+                            <CheckCircle2 className="w-5 h-5 text-primary mt-0.5" />
                             <span>Pas de livraison physique</span>
                           </li>
                           <li className="flex items-start gap-2">
-                            <span className="text-primary">•</span>
+                            <CheckCircle2 className="w-5 h-5 text-primary mt-0.5" />
                             <span>Automatisation totale</span>
                           </li>
                           <li className="flex items-start gap-2">
-                            <span className="text-primary">•</span>
+                            <Users className="w-5 h-5 text-primary mt-0.5" />
                             <span>Scalable à l'infini</span>
                           </li>
                         </ul>
@@ -221,15 +231,15 @@ export default function Home() {
                         <h4 className="text-xl font-bold mb-4">Analyse & Design</h4>
                         <ul className="space-y-2 text-sm">
                           <li className="flex items-start gap-2">
-                            <span className="text-primary">→</span>
+                            <Users className="w-4 h-4 text-primary mt-0.5" />
                             <span>Étude de votre audience</span>
                           </li>
                           <li className="flex items-start gap-2">
-                            <span className="text-primary">→</span>
+                            <CheckCircle2 className="w-4 h-4 text-primary mt-0.5" />
                             <span>Design de l'interface</span>
                           </li>
                           <li className="flex items-start gap-2">
-                            <span className="text-primary">→</span>
+                            <CheckCircle2 className="w-4 h-4 text-primary mt-0.5" />
                             <span>Architecture technique</span>
                           </li>
                         </ul>
@@ -240,15 +250,15 @@ export default function Home() {
                         <h4 className="text-xl font-bold mb-4">Développement IA</h4>
                         <ul className="space-y-2 text-sm">
                           <li className="flex items-start gap-2">
-                            <span className="text-primary">→</span>
+                            <Sparkles className="w-4 h-4 text-primary mt-0.5" />
                             <span>Génération de code optimisé</span>
                           </li>
                           <li className="flex items-start gap-2">
-                            <span className="text-primary">→</span>
+                            <CheckCircle2 className="w-4 h-4 text-primary mt-0.5" />
                             <span>Tests automatisés</span>
                           </li>
                           <li className="flex items-start gap-2">
-                            <span className="text-primary">→</span>
+                            <CheckCircle2 className="w-4 h-4 text-primary mt-0.5" />
                             <span>Intégration continue</span>
                           </li>
                         </ul>
@@ -259,15 +269,15 @@ export default function Home() {
                         <h4 className="text-xl font-bold mb-4">Expertise Humaine</h4>
                         <ul className="space-y-2 text-sm">
                           <li className="flex items-start gap-2">
-                            <span className="text-primary">→</span>
+                            <Users className="w-4 h-4 text-primary mt-0.5" />
                             <span>Review par des experts</span>
                           </li>
                           <li className="flex items-start gap-2">
-                            <span className="text-primary">→</span>
+                            <CheckCircle2 className="w-4 h-4 text-primary mt-0.5" />
                             <span>Optimisations manuelles</span>
                           </li>
                           <li className="flex items-start gap-2">
-                            <span className="text-primary">→</span>
+                            <CheckCircle2 className="w-4 h-4 text-primary mt-0.5" />
                             <span>Tests de performance</span>
                           </li>
                         </ul>
@@ -279,15 +289,15 @@ export default function Home() {
                         <h4 className="text-xl font-bold mb-4">Avantages uniques</h4>
                         <ul className="space-y-3">
                           <li className="flex items-start gap-2">
-                            <span className="text-primary">•</span>
+                            <DollarSign className="w-5 h-5 text-primary mt-0.5" />
                             <span>Coûts divisés par 5</span>
                           </li>
                           <li className="flex items-start gap-2">
-                            <span className="text-primary">•</span>
+                            <Calendar className="w-5 h-5 text-primary mt-0.5" />
                             <span>Délai réduit de 80%</span>
                           </li>
                           <li className="flex items-start gap-2">
-                            <span className="text-primary">•</span>
+                            <CheckCircle2 className="w-5 h-5 text-primary mt-0.5" />
                             <span>Qualité professionnelle garantie</span>
                           </li>
                         </ul>
@@ -297,15 +307,15 @@ export default function Home() {
                         <h4 className="text-xl font-bold mb-4">Pourquoi maintenant ?</h4>
                         <ul className="space-y-3">
                           <li className="flex items-start gap-2">
-                            <span className="text-primary">•</span>
+                            <CheckCircle2 className="w-5 h-5 text-primary mt-0.5" />
                             <span>Technologie mature et fiable</span>
                           </li>
                           <li className="flex items-start gap-2">
-                            <span className="text-primary">•</span>
+                            <TrendingUp className="w-5 h-5 text-primary mt-0.5" />
                             <span>Coûts historiquement bas</span>
                           </li>
                           <li className="flex items-start gap-2">
-                            <span className="text-primary">•</span>
+                            <CheckCircle2 className="w-5 h-5 text-primary mt-0.5" />
                             <span>Avantage concurrentiel</span>
                           </li>
                         </ul>
@@ -383,6 +393,7 @@ export default function Home() {
                     </p>
                     <Button size="lg" className="text-lg px-8 py-6">
                       Créer votre solution SaaS
+                      <ArrowRight className="ml-2 w-5 h-5" />
                     </Button>
                   </div>
                 </div>
