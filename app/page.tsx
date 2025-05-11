@@ -22,8 +22,8 @@ export default function Home() {
         <div className="container mx-auto px-4 mt-20">
           <div className="max-w-5xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 text-foreground">
-              Transformez votre Audience en <span className="text-primary">5 000 €/mois</span> de
-              Revenus Récurrents
+              Transformez votre Audience en{' '}
+              <span className="text-primary">5&nbsp;000&nbsp;€/mois</span> de Revenus Récurrents
             </h1>
 
             <p className="text-xl md:text-2xl text-muted-foreground mb-8">
@@ -386,30 +386,8 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            {/* 
-            <div className="mt-20 max-w-4xl mx-auto">
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-primary/10 rounded-3xl transform -rotate-1"></div>
-                <div className="relative bg-gradient-to-br from-primary/5 to-primary/10 rounded-3xl p-8 md:p-12">
-                  <div className="absolute -top-4 -left-4 w-24 h-24 bg-primary/10 rounded-full blur-2xl"></div>
-                  <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-primary/10 rounded-full blur-2xl"></div>
-                  <div className="text-center">
-                    <h3 className="text-2xl md:text-3xl font-bold mb-6">
-                      Prêt à transformer votre audience en business durable ?
-                    </h3>
-                    <p className="text-lg text-muted-foreground mb-8">
-                      Lancez votre SaaS en 30 jours et commencez à générer des revenus récurrents
-                    </p>
-                    <Button size="lg" className="text-lg px-8 py-6">
-                      Créer votre solution SaaS
-                      <ArrowRight className="ml-2 w-5 h-5 shrink-0" />
-                    </Button>
-                  </div>
-                </div>
-              </div>
-            </div> */}
 
-            {/* Section Garantie */}
+            {/* Section Tarification */}
             <div className="mt-20 max-w-4xl mx-auto">
               <div className="relative">
                 <div className="absolute inset-0 bg-primary/5 rounded-3xl transform rotate-1"></div>
@@ -417,40 +395,109 @@ export default function Home() {
                   <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/10 rounded-full blur-2xl"></div>
                   <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-primary/10 rounded-full blur-2xl"></div>
                   <div className="text-center">
-                    <h3 className="text-2xl md:text-3xl font-bold mb-6">
-                      Notre Garantie : 100 Utilisateurs ou Remboursé
-                    </h3>
+                    <h3 className="text-2xl md:text-3xl font-bold mb-6">Votre SaaS en 2 Étapes</h3>
                     <p className="text-lg text-muted-foreground mb-8">
-                      Nous sommes tellement confiants dans notre capacité à vous aider à réussir que
-                      nous vous offrons une garantie sans risque
+                      Commencez avec une solution complète, puis évoluez à votre rythme
                     </p>
-                    <div className="grid md:grid-cols-3 gap-6 mt-8">
-                      <div className="bg-background/80 p-6 rounded-xl border border-primary/20">
-                        <div className="text-primary font-bold text-2xl mb-2">100%</div>
-                        <h4 className="text-xl font-bold mb-4">Remboursement</h4>
-                        <p className="text-sm text-muted-foreground">
-                          Si vous n'atteignez pas 100 utilisateurs dans le premier mois, nous vous
-                          remboursons intégralement
+                    <div className="grid md:grid-cols-2 gap-8 mt-8">
+                      <div className="bg-background/80 p-8 rounded-xl border border-primary/20">
+                        <div className="flex items-baseline justify-center gap-2 mb-2">
+                          <span className="text-muted-foreground line-through text-lg">5 000€</span>
+                          <div className="text-primary font-bold text-4xl">3 999€</div>
+                        </div>
+                        <div className="text-sm text-primary font-medium text-center mb-4">
+                          Économisez 1 001€
+                        </div>
+                        <h4 className="text-xl font-bold mb-4">Votre SaaS de Base</h4>
+                        <p className="text-sm text-muted-foreground mb-4">
+                          Une solution complète et fonctionnelle dès le départ
                         </p>
+                        <ul className="space-y-4 text-left">
+                          <li className="flex items-start gap-2">
+                            <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                            <span>Développement sur mesure de votre plateforme</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                            <span>Interface personnalisée à votre image</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                            <span>Hébergement et mise en ligne inclus</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                            <span>Formation complète à l'utilisation</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                            <span>Support technique initial</span>
+                          </li>
+                        </ul>
+                        <div className="mt-6 pt-6 border-t border-primary/20">
+                          <div className="flex items-baseline justify-center gap-2 mb-2">
+                            <span className="text-muted-foreground line-through text-lg">
+                              2 500€/mois
+                            </span>
+                            <div className="text-primary font-bold text-2xl">1 999€/mois</div>
+                          </div>
+                          <div className="text-sm text-primary font-medium text-center mb-4">
+                            Économisez 501€ par mois
+                          </div>
+                          <h5 className="text-lg font-bold mb-2">Pour Évoluer</h5>
+                          <p className="text-sm text-muted-foreground mb-4">
+                            Une fois votre SaaS lancé, continuez à l'améliorer
+                          </p>
+                          <ul className="space-y-2 text-left text-sm">
+                            <li className="flex items-start gap-2">
+                              <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                              <span>Nouvelles fonctionnalités chaque mois</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                              <span>Support prioritaire 24/7</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                              <span>Optimisations continues</span>
+                            </li>
+                          </ul>
+                        </div>
                       </div>
-                      <div className="bg-background/80 p-6 rounded-xl border border-primary/20">
-                        <div className="text-primary font-bold text-2xl mb-2">30</div>
-                        <h4 className="text-xl font-bold mb-4">Jours</h4>
-                        <p className="text-sm text-muted-foreground">
-                          Un mois complet pour atteindre l'objectif avec notre support personnalisé
-                        </p>
-                      </div>
-                      <div className="bg-background/80 p-6 rounded-xl border border-primary/20">
-                        <div className="text-primary font-bold text-2xl mb-2">0</div>
-                        <h4 className="text-xl font-bold mb-4">Risque</h4>
-                        <p className="text-sm text-muted-foreground">
-                          Aucun engagement à long terme, aucune question posée pour le remboursement
-                        </p>
+
+                      <div className="bg-background/80 p-8 rounded-xl border border-primary/20">
+                        <div className="text-primary font-bold text-4xl mb-2">Garantie</div>
+                        <h4 className="text-xl font-bold mb-4">100 Utilisateurs ou Remboursé</h4>
+                        <div className="bg-primary/5 p-4 rounded-lg mb-4">
+                          <p className="text-sm text-primary font-medium">
+                            Nous sommes tellement confiants dans notre solution que nous vous
+                            remboursons intégralement si vous n'atteignez pas 100 utilisateurs dans
+                            le premier mois
+                          </p>
+                        </div>
+                        <ul className="space-y-4 text-left">
+                          <li className="flex items-start gap-2">
+                            <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                            <span>30 jours pour atteindre votre objectif</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                            <span>Accompagnement personnalisé quotidien</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                            <span>Remboursement total sans condition</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                            <span>Processus de remboursement simple et rapide</span>
+                          </li>
+                        </ul>
                       </div>
                     </div>
                     <div className="mt-8">
                       <Button size="lg" className="text-lg px-8 py-6">
-                        Commencer sans risque
+                        Lancer votre SaaS
                         <ArrowRight className="ml-2 w-5 h-5 shrink-0" />
                       </Button>
                     </div>
