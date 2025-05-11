@@ -45,7 +45,7 @@ export default function Home() {
             <div className="mt-16">
               <h2 className="text-3xl font-bold mb-8">Découvrez votre potentiel de revenus</h2>
               <RevenueCalculator
-                initialSubscriberCount={100000}
+                initialSubscriberCount={10000}
                 initialConversionRate={1}
                 initialSubscriptionPrice={50}
               />
