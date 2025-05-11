@@ -97,7 +97,8 @@ export default function Home() {
                 variants={heroContent}
                 className="text-xl md:text-2xl text-muted-foreground mb-8"
               >
-                Votre solution SaaS clé en main en 30 jours grâce au développement accéléré par l'IA
+                Votre solution SaaS clé en main en 30 jours grâce à un développement accéléré par
+                l'IA
               </motion.p>
 
               <motion.div
@@ -578,26 +579,28 @@ export default function Home() {
                       whileHover={{ scale: 1.02 }}
                       className="bg-background/80 p-6 rounded-xl border border-primary/20"
                     >
-                      <div className="flex items-center gap-4 mb-4">
-                        <a
-                          href="https://twitter.com/victortimsit"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="w-12 h-12 rounded-full overflow-hidden hover:opacity-80 transition-opacity"
-                        >
-                          <img
-                            src="https://pbs.twimg.com/profile_images/1867204249030991872/ubUdcFWb_400x400.jpg"
-                            alt="Victor Timsit"
-                            className="w-full h-full object-cover"
-                          />
-                        </a>
-                        <div className="flex flex-col text-left">
-                          <h4 className="font-bold leading-tight">Victor Timsit</h4>
-                          <p className="text-sm text-muted-foreground leading-tight">
-                            Klap.app Founder
-                          </p>
+                      <a
+                        href="https://twitter.com/victortimsit"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block mb-4 group"
+                      >
+                        <div className="flex items-center gap-4">
+                          <div className="w-12 h-12 rounded-full overflow-hidden transition-opacity group-hover:opacity-80">
+                            <img
+                              src="https://pbs.twimg.com/profile_images/1867204249030991872/ubUdcFWb_400x400.jpg"
+                              alt="Victor Timsit"
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+                          <div className="flex flex-col text-left">
+                            <h4 className="font-bold leading-tight">Victor Timsit</h4>
+                            <p className="text-sm text-muted-foreground leading-tight">
+                              Klap.app Founder
+                            </p>
+                          </div>
                         </div>
-                      </div>
+                      </a>
                       <p className="text-muted-foreground mb-4">
                         "Très content du travail, rapide et quali on recommande :)"
                       </p>
@@ -614,26 +617,28 @@ export default function Home() {
                       whileHover={{ scale: 1.02 }}
                       className="bg-background/80 p-6 rounded-xl border border-primary/20"
                     >
-                      <div className="flex items-center gap-4 mb-4">
-                        <a
-                          href="https://x.com/benjamincode"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="w-12 h-12 rounded-full overflow-hidden hover:opacity-80 transition-opacity"
-                        >
-                          <img
-                            src="https://pbs.twimg.com/profile_images/1607353032420769793/I8qQSUfQ_400x400.jpg"
-                            alt="Benjamin Debon"
-                            className="w-full h-full object-cover"
-                          />
-                        </a>
-                        <div className="flex flex-col text-left">
-                          <h4 className="font-bold leading-tight">Benjamin Debon</h4>
-                          <p className="text-sm text-muted-foreground leading-tight">
-                            YouTuber / Meetsponsors Founder
-                          </p>
+                      <a
+                        href="https://x.com/benjamincode"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block mb-4 group"
+                      >
+                        <div className="flex items-center gap-4">
+                          <div className="w-12 h-12 rounded-full overflow-hidden transition-opacity group-hover:opacity-80">
+                            <img
+                              src="https://pbs.twimg.com/profile_images/1607353032420769793/I8qQSUfQ_400x400.jpg"
+                              alt="Benjamin Debon"
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+                          <div className="flex flex-col text-left">
+                            <h4 className="font-bold leading-tight">Benjamin Debon</h4>
+                            <p className="text-sm text-muted-foreground leading-tight">
+                              YouTuber / Meetsponsors Founder
+                            </p>
+                          </div>
                         </div>
-                      </div>
+                      </a>
                       <p className="text-muted-foreground mb-4">
                         "Très rapide à comprendre le projet et à livrer des fonctionnalités de
                         qualité. Excellent sens du détail et une bonne sensibilité UX. Je recommande
