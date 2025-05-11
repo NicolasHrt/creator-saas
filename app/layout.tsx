@@ -1,13 +1,12 @@
 import type { Metadata } from 'next';
-import { Open_Sans } from 'next/font/google';
+import { Outfit } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
 
-const openSans = Open_Sans({
+const outfit = Outfit({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-opensans',
-  weight: ['300', '400', '500', '600', '700', '800'],
+  variable: '--font-outfit',
 });
 
 export const metadata: Metadata = {
@@ -18,7 +17,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fr" suppressHydrationWarning>
-      <body className={`${openSans.variable} font-sans`}>
+      <body className={`${outfit.variable} font-sans`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

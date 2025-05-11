@@ -12,9 +12,8 @@ export function Navbar() {
         </div>
 
         <div className="flex items-center gap-4">
-          <ModeToggle />
           <Button variant="default" size="sm">
-            Démarrer
+            Créer votre solution SaaS
           </Button>
         </div>
       </div>
