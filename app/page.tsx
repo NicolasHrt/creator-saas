@@ -1,7 +1,6 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Navbar } from '@/components/Navbar';
 import { RevenueCalculator } from './components/revenue-calculator';
 import {
@@ -15,7 +14,7 @@ import {
   Sparkles,
 } from 'lucide-react';
 import { Input } from '@/components/ui/input';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 // Variants pour les animations
 const fadeInUp = {
@@ -56,15 +55,6 @@ const staggerContainer = {
   },
 };
 
-const cardHover = {
-  hover: {
-    scale: 1.02,
-    transition: {
-      duration: 0.2,
-    },
-  },
-};
-
 const processCard = {
   hidden: { opacity: 0, y: 20 },
   visible: {
@@ -86,7 +76,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <div className="min-h-screen bg-background pt-16">
+      <div className="min-h-screen bg-transparent pt-16">
         <div className="container mx-auto px-4 mt-20">
           <div className="max-w-5xl mx-auto text-center">
             <motion.div
