@@ -137,7 +137,7 @@ export default function Home() {
                 <div className="relative p-8 md:p-12">
                   <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary/0 via-primary to-primary/0"></div>
                   <h3 className="text-2xl md:text-3xl font-bold mb-6">
-                    Qu'est-ce qu'un SaaS et pourquoi c'est parfait pour vous ?
+                    Qu'est-ce qu'un SaaS et pourquoi c'est parfait pour&nbsp;vous&nbsp;?
                   </h3>
                   <div className="space-y-6 text-left">
                     <p className="text-lg text-muted-foreground">
@@ -222,8 +222,6 @@ export default function Home() {
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-primary/10 rounded-3xl transform rotate-1"></div>
                 <div className="relative bg-gradient-to-br from-primary/5 to-primary/10 rounded-3xl p-8 md:p-12">
-                  <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/10 rounded-full blur-2xl"></div>
-                  <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-primary/10 rounded-full blur-2xl"></div>
                   <h3 className="text-2xl md:text-3xl font-bold mb-6 relative">
                     Pourquoi c'est le moment idéal pour lancer votre SaaS
                   </h3>
@@ -351,7 +349,7 @@ export default function Home() {
                 <div className="relative p-8 md:p-12">
                   <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary/0 via-primary to-primary/0"></div>
                   <h3 className="text-2xl md:text-3xl font-bold mb-6">
-                    Vous avez déjà fait le plus dur : construire une audience fidèle
+                    Vous avez déjà fait le plus dur : construire une audience&nbsp;fidèle
                   </h3>
                   <div className="space-y-6 text-left">
                     <p className="text-lg text-muted-foreground">
@@ -387,13 +385,94 @@ export default function Home() {
               </div>
             </div>
 
+            {/* Section Témoignages */}
+            <div className="mt-20 max-w-4xl mx-auto">
+              <div className="relative">
+                <div className="absolute inset-0 bg-primary/5 rounded-3xl transform -rotate-1"></div>
+                <div className="relative bg-primary/5 rounded-3xl p-8 md:p-12">
+                  <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center">
+                    Ce que disent nos clients
+                  </h3>
+                  <div className="grid md:grid-cols-2 gap-8">
+                    <div className="bg-background/80 p-6 rounded-xl border border-primary/20">
+                      <div className="flex items-center gap-4 mb-4">
+                        <a
+                          href="https://twitter.com/victortimsit"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-12 h-12 rounded-full overflow-hidden hover:opacity-80 transition-opacity"
+                        >
+                          <img
+                            src="https://pbs.twimg.com/profile_images/1867204249030991872/ubUdcFWb_400x400.jpg"
+                            alt="Victor Timsit"
+                            className="w-full h-full object-cover"
+                          />
+                        </a>
+                        <div className="flex flex-col text-left">
+                          <h4 className="font-bold leading-tight">Victor Timsit</h4>
+                          <p className="text-sm text-muted-foreground leading-tight">
+                            Klap.app Founder
+                          </p>
+                        </div>
+                      </div>
+                      <p className="text-muted-foreground mb-4">
+                        "Très content du travail, rapide et quali on recommande :)"
+                      </p>
+                      <Button variant="outline" size="sm" className="w-full" asChild>
+                        <a href="https://klap.app" target="_blank" rel="noopener noreferrer">
+                          Voir Klap.app
+                          <ArrowRight className="ml-2 h-4 w-4" />
+                        </a>
+                      </Button>
+                    </div>
+
+                    <div className="bg-background/80 p-6 rounded-xl border border-primary/20">
+                      <div className="flex items-center gap-4 mb-4">
+                        <a
+                          href="https://x.com/benjamincode"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-12 h-12 rounded-full overflow-hidden hover:opacity-80 transition-opacity"
+                        >
+                          <img
+                            src="https://pbs.twimg.com/profile_images/1607353032420769793/I8qQSUfQ_400x400.jpg"
+                            alt="Benjamin Debon"
+                            className="w-full h-full object-cover"
+                          />
+                        </a>
+                        <div className="flex flex-col text-left">
+                          <h4 className="font-bold leading-tight">Benjamin Debon</h4>
+                          <p className="text-sm text-muted-foreground leading-tight">
+                            YouTuber / Meetsponsors Founder
+                          </p>
+                        </div>
+                      </div>
+                      <p className="text-muted-foreground mb-4">
+                        "Très rapide à comprendre le projet et à livrer des fonctionnalités de
+                        qualité. Excellent sens du détail et une bonne sensibilité UX. Je recommande
+                        vivement !"
+                      </p>
+                      <Button variant="outline" size="sm" className="w-full" asChild>
+                        <a
+                          href="https://meetsponsors.com"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Voir Meetsponsors
+                          <ArrowRight className="ml-2 h-4 w-4" />
+                        </a>
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {/* Section Tarification */}
             <div className="mt-20 max-w-4xl mx-auto">
               <div className="relative">
                 <div className="absolute inset-0 bg-primary/5 rounded-3xl transform rotate-1"></div>
                 <div className="relative bg-primary/5 rounded-3xl p-8 md:p-12">
-                  <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/10 rounded-full blur-2xl"></div>
-                  <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-primary/10 rounded-full blur-2xl"></div>
                   <div className="text-center">
                     <h3 className="text-2xl md:text-3xl font-bold mb-6">Votre SaaS en 2 Étapes</h3>
                     <p className="text-lg text-muted-foreground mb-8">
